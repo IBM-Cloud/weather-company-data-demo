@@ -1,4 +1,4 @@
-# twctestapp
+# Insights for Weather demo app (twctestapp)
 A demo app that uses IBM Insights for Weather for Bluemix.
 #Insights for Weather Demo App Overview
 
