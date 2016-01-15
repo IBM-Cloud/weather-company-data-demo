@@ -1,0 +1,85 @@
+/* 
+*  Copyright IBM Corp. 2015  All Rights Reserved.
+*  IBM Insights for Twitter Demo App - Beta version
+*/
+
+.cde_object {
+	font-family: arial;
+	font-size: 9pt;
+	background-color: #D6EBFF;
+	color:black;
+}
+
+.cde_array {
+	background-color: #C2E0FF;
+}
+
+.cde_item {
+}
+
+.cde_cell_property {
+	padding:0px;
+}
+
+.cde_cell_value {
+	padding:0px;
+}
+
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display_spinner {
+	width:100%;
+}
+
+.spinner {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -160px;
+}
+
+.search_button {
+	margin:0 20px;
+	padding:10px 20px;
+	font-size:10pt;
+	background-color:#5EA9DD;
+	border-radius:5px;
+	font-weight: bold;"
+}
+
+.display_logo {
+  margin-left: auto;
+  margin-right: auto;
+	margin-top:50px;
+	width:640px;
+}
+
+.display_search_text {
+  margin-left: auto;
+  margin-right: auto;	
+  width:600px;
+	margin-top:50px;
+}
+
+.search_textbox {
+  margin-left: auto;
+  margin-right: auto; 
+	padding:5px;
+	font-size:14pt;
+	border:2px inset #5EA9DD;
+	border-radius:5px;
+  width:600px;
+}
+
+.display_buttons {
+ 	width:360px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30px; 
+ 	margin-bottom:30px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "TWCTestApp",
+  "version": "0.0.1",
+  "description": "A sample nodejs app for using THE Weather Company API Service in Bluemix.",
+  "dependencies": {
+    "cfenv": "^1.0.3",
+    "express": "3.4.7",
+    "request": "^2.51.0"
+  },
+  "engines": {
+    "node": "0.12.*"
+  },
+  "repository": {}
+}
