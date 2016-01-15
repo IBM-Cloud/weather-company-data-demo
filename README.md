@@ -10,7 +10,7 @@ This app demonstrates how quickly you can build an app on Bluemix using the Insi
 ## Application Requirements
 You can use this app in any browser.
 
-## Running the app on Bluemix
+## Run the app on Bluemix
 You can deploy your own instance of Insights for Weather Demo app to Bluemix. 
 To do this, you can either use the _Deploy to Bluemix_ button for an automated deployment or follow the steps below to create and deploy your app manually.
 
