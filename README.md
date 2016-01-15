@@ -1,6 +1,6 @@
 # Insights for Weather demo app (twctestapp)
 A demo app that uses IBM Insights for Weather for Bluemix.
-#Insights for Weather Demo App Overview
+#Overview
 
 The Insights for Weather Demo app uses your current location (or a location that you select from the drop-down list) 
 to display the current weather conditions, the 24-hour forecast, and the 10-day forecast, using the Insights for Weather REST APIs and The Weather Company weather data.
