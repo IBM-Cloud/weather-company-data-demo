@@ -1,5 +1,5 @@
 // Copyright IBM Corp. 2015  All Rights Reserved.
-// IBM Insights for Weather Demo App - Beta version
+// IBM Insights for Weather Demo App - Initial version
 
 //-- display json in tables
 
