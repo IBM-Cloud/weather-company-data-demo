@@ -30,18 +30,22 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 
 4. `cd` into this newly created directory
 
-5. Edit the `manifest.yml` file and change the `<application-name>` and `<application-host>` to something unique.
+5. Edit the `manifest.yml` file and change the `<name>` and `<host>` to something unique.
 
   ```
-  applications:
-  - name: weather-demo-app-test
-    framework: node
-    runtime: node12
-    memory: 128M
-    instances: 1
-    host: weather-demo-app-test
+applications:
+- disk_quota: 1024M
+  host: twctestapp
+  name: twctestapp
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 3
+  memory: 512M
+  services:
+  - weather-premium
   ```
-  The host you use will determinate your application URL initially, for example, `<application-host>.mybluemix.net`.
+  The host you use will determinate your application URL initially, for example, `<host>.mybluemix.net`.
 
 6. Connect to Bluemix in the command line tool and follow the prompts to log in:
 
@@ -64,7 +68,7 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 9. Now bind the service to your app.
 
   ```
-  $ cf bind-service APP_NAME box
+  $ cf bind-service APP_NAME insights-weather
   ```
 
 12. Finally, restage your app.
