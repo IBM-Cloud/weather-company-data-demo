@@ -2,7 +2,7 @@
 A demo app that uses IBM Insights for Weather for Bluemix.
 #Overview
 
-The Insights for Weather Demo app uses your current location (or a location that you select from the drop-down list) 
+The Insights for Weather demo app uses your current location (or a location that you select from the drop-down list) 
 to display the current weather conditions, the 24-hour forecast, and the 10-day forecast, using the Insights for Weather REST APIs and The Weather Company weather data.
 
 This app demonstrates how quickly you can build an app on Bluemix using the Insights for Weather service.
@@ -11,16 +11,16 @@ This app demonstrates how quickly you can build an app on Bluemix using the Insi
 You can use this app in any browser.
 
 ## Run the app on Bluemix
-You can deploy your own instance of Insights for Weather Demo app to Bluemix. 
+You can deploy your own instance of Insights for Weather demo app to Bluemix. 
 To do this, you can either use the _Deploy to Bluemix_ button for an automated deployment or follow the steps below to create and deploy your app manually.
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
 
-1. Create a Bluemix Account
+1. Create a Bluemix Account.
 
     [Sign up][bluemix_signup_url] for Bluemix, or use an existing account.
 
-2. Download and install the [Cloud-foundry CLI][cloud_foundry_url] tool
+2. Download and install the [Cloud-foundry CLI][cloud_foundry_url] tool.
 
 3. Clone the app to your local environment from your terminal using the following command:
 
@@ -28,7 +28,7 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
   git clone https://github.com/IBM-Bluemix/twctestapp.git
   ```
 
-4. `cd` into this newly created directory
+4. `cd` into this newly created directory.
 
 5. Edit the `manifest.yml` file and change the `<name>` and `<host>` to something unique.
 
@@ -77,7 +77,7 @@ applications:
   $ cf restage twctestapp
   ```
 
-Congratulations! You now have your very own instance of Insights for Weather running on Bluemix.
+Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix.
 
 ## Run the app locally
 1. Create a Bluemix Account. You will need this account to create a Insights for Weather service and grab the credentials later on.
@@ -86,21 +86,21 @@ Congratulations! You now have your very own instance of Insights for Weather run
 
 2. If don't have node.js already, [download node.js][download_node_url] and install it on your local machine.
 
-3. Clone the app to your local environment from your terminal using the following command
+3. Clone the app to your local environment from your terminal using the following command:
 
   ```
   git clone https://github.com/IBM-Bluemix/twctestapp.git
   ```
 
-4. `cd` into this newly created directory
+4. `cd` into this newly created directory.
 
-5. Install the required npm and bower packages using the following command
+5. Install the required npm and bower packages using the following command:
 
   ```
   npm install
   ```
 
-6. Start your app locally with the following command.
+6. Start your app locally with the following command:
 
   ```
   npm start
@@ -109,13 +109,13 @@ Congratulations! You now have your very own instance of Insights for Weather run
 Your app will be automatically assigned to a port that will be logged to your terminal. To access the app, go to localhost:PORT in your browser. Happy developing!
 
 ## API documentation
-The Insights for Weather Demo app uses REST APIs to retrieve historical and real-time weather data from The Weather Company. 
+The Insights for Weather demo app uses REST APIs to retrieve historical and real-time weather data from The Weather Company. 
 You can try out the [REST APIs](https://twcservice.mybluemix.net/rest-api/) to get started with your own app. 
 
 ## Contribute
 We are happy to accept external contributions to this project, either in the form of issues or pull requests. 
-If you find a bug, please report it via the [Issues section](https://github.com/IBM-Bluemix/twctestapp/issues) or even better, fork the project and submit a pull request with your fix! 
-Pull requests will be evaluated on an individual basis based on value add to the sample application.
+If you find a bug, please report it using the [Issues section](https://github.com/IBM-Bluemix/twctestapp/issues) or even better, fork the project and submit a pull request with your fix! 
+Pull requests will be evaluated on an individual basis based on value added to the sample application.
 
 ## Troubleshooting
 
@@ -128,7 +128,7 @@ For more detailed information on troubleshooting your application, see the [Trou
 
 ## Privacy Notice
 
-The Insights for Weather Demo App includes code to track deployments to Bluemix and other Cloud Foundry platforms. 
+The Insights for Weather demo app includes code to track deployments to Bluemix and other Cloud Foundry platforms. 
 The following information is sent to a [Deployment Tracker](https://github.com/cloudant-labs/deployment-tracker) service on each deployment:
 
 * Application Name (application_name)
