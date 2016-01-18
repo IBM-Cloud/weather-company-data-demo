@@ -145,5 +145,5 @@ Deployment tracking can be disabled by removing `require("cf-deployment-tracker-
 [IBM  Bluemix Documentation](https://www.ng.bluemix.net/docs/)  
 [IBM Bluemix Developers Community](http://developer.ibm.com/bluemix)
 
-[bluemix_signup_url]: https://ibm.biz/go-hello-world-signup
+[bluemix_signup_url]: https://console.ng.bluemix.net/registration/
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli
