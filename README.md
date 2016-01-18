@@ -1,6 +1,6 @@
-# twctestapp
+# Insights for Weather demo app
 A demo app that uses IBM Insights for Weather for Bluemix.
-#Insights for Weather Demo App Overview
+#Overview
 
 The Insights for Weather Demo app uses your current location (or a location that you select from the drop-down list) 
 to display the current weather conditions, the 24-hour forecast, and the 10-day forecast, using the Insights for Weather REST APIs and The Weather Company weather data.
@@ -10,7 +10,7 @@ This app demonstrates how quickly you can build an app on Bluemix using the Insi
 ## Application Requirements
 You can use this app in any browser.
 
-## Running the app on Bluemix
+## Run the app on Bluemix
 You can deploy your own instance of Insights for Weather Demo app to Bluemix. 
 To do this, you can either use the _Deploy to Bluemix_ button for an automated deployment or follow the steps below to create and deploy your app manually.
 
@@ -30,18 +30,22 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 
 4. `cd` into this newly created directory
 
-5. Edit the `manifest.yml` file and change the `<application-name>` and `<application-host>` to something unique.
+5. Edit the `manifest.yml` file and change the `<name>` and `<host>` to something unique.
 
   ```
-  applications:
-  - name: weather-demo-app-test
-    framework: node
-    runtime: node12
-    memory: 128M
-    instances: 1
-    host: weather-demo-app-test
+applications:
+- disk_quota: 1024M
+  name: twctestapp
+  host: twctestapp
+  command: node app.js
+  path: .
+  domain: mybluemix.net
+  instances: 3
+  memory: 512M
+  services:
+  - twctestapp-weatherinsights
   ```
-  The host you use will determinate your application URL initially, for example, `<application-host>.mybluemix.net`.
+  The host you use will determinate your application URL initially, for example, `<host>.mybluemix.net`.
 
 6. Connect to Bluemix in the command line tool and follow the prompts to log in:
 
@@ -53,7 +57,7 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 7. Create the Insights for Weather service in Bluemix.
 
   ```
-  $ cf create-service insights_weather standard insights_weather
+  $ cf create-service weatherinsights Free twctestapp-weatherinsights
   ```
 
 8. Push it to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument
@@ -64,19 +68,19 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 9. Now bind the service to your app.
 
   ```
-  $ cf bind-service APP_NAME box
+  $ cf bind-service twctestapp twctestapp-weatherinsights
   ```
 
 12. Finally, restage your app.
 
   ```
-  $ cf restage APP_NAME
+  $ cf restage twctestapp
   ```
 
 Congratulations! You now have your very own instance of Insights for Weather running on Bluemix.
 
 ## Run the app locally
-1. Create a Bluemix Account. You will need this to create a Insights for Weather service and grab the credentials later on.
+1. Create a Bluemix Account. You will need this account to create a Insights for Weather service and grab the credentials later on.
 
     [Sign up][bluemix_signup_url] in Bluemix, or use an existing account.
 
@@ -145,5 +149,5 @@ Deployment tracking can be disabled by removing `require("cf-deployment-tracker-
 [IBM  Bluemix Documentation](https://www.ng.bluemix.net/docs/)  
 [IBM Bluemix Developers Community](http://developer.ibm.com/bluemix)
 
-[bluemix_signup_url]: https://ibm.biz/go-hello-world-signup
+[bluemix_signup_url]: https://console.ng.bluemix.net/registration/
 [cloud_foundry_url]: https://github.com/cloudfoundry/cli
