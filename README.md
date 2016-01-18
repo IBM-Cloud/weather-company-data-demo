@@ -80,7 +80,7 @@ applications:
 Congratulations! You now have your very own instance of Insights for Weather running on Bluemix.
 
 ## Run the app locally
-1. Create a Bluemix Account. You will need this to create a Insights for Weather service and grab the credentials later on.
+1. Create a Bluemix Account. You will need this account to create a Insights for Weather service and grab the credentials later on.
 
     [Sign up][bluemix_signup_url] in Bluemix, or use an existing account.
 
