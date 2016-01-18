@@ -1,5 +1,5 @@
 {
-  "name": "TWCTestApp",
+  "name": "twctestapp",
   "version": "0.0.1",
   "private": false,
   "description": "A sample nodejs app for using the Insights for Weather Service in Bluemix.",
@@ -15,7 +15,6 @@
     "type": "git",
     "url": "https://github.com/IBM-Bluemix/twctestapp.git"
   },
-  "dependencies": {},
   "author": [
     {
       "name": "Robert Desbiens",
