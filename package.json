@@ -1,7 +1,8 @@
 {
   "name": "TWCTestApp",
   "version": "0.0.1",
-  "description": "A sample nodejs app for using THE Weather Company API Service in Bluemix.",
+  "private": false,
+  "description": "A sample nodejs app for using the Insights for Weather Service in Bluemix.",
   "dependencies": {
     "cfenv": "^1.0.3",
     "express": "3.4.7",
@@ -10,5 +11,21 @@
   "engines": {
     "node": "0.12.*"
   },
-  "repository": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM-Bluemix/twctestapp.git"
+  },
+  "dependencies": {},
+  "author": [
+    {
+      "name": "Robert Desbiens",
+      "email": "Robert.Desbiens@ca.ibm.com"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Trish Smith",
+      "email": "smith@ca.ibm.com"
+    }
+  ]
 }
