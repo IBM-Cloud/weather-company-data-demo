@@ -92,7 +92,7 @@ Congratulations! You now have your very own instance of Insights for Weather run
   git clone https://github.com/IBM-Bluemix/twctestapp.git
   ```
 
-4. cd into this newly created directory
+4. `cd` into this newly created directory
 
 5. Install the required npm and bower packages using the following command
 
