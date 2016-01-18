@@ -30,7 +30,7 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 
 4. `cd` into this newly created directory
 
-5. Edit the `manifest.yml` file and change the `<name>` and `<host>` to something unique.
+5. Edit the `manifest.yml` file and change the `<host>` and `<name>` to something unique.
 
   ```
 applications:
@@ -57,7 +57,7 @@ applications:
 7. Create the Insights for Weather service in Bluemix.
 
   ```
-  $ cf create-service insights_weather standard insights_weather
+  $ cf create-service insights-for-weather standard insights-weather
   ```
 
 8. Push it to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument
@@ -68,7 +68,7 @@ applications:
 9. Now bind the service to your app.
 
   ```
-  $ cf bind-service APP_NAME insights-weather
+  $ cf bind-service twctestapp insights-weather
   ```
 
 12. Finally, restage your app.
