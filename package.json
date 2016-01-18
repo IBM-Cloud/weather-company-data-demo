@@ -3,11 +3,6 @@
   "version": "0.0.1",
   "private": false,
   "description": "A sample nodejs app for using the Insights for Weather Service in Bluemix.",
-  "dependencies": {
-    "cfenv": "^1.0.3",
-    "express": "3.4.7",
-    "request": "^2.51.0"
-  },
   "engines": {
     "node": "0.12.*"
   },
@@ -15,6 +10,11 @@
     "type": "git",
     "url": "https://github.com/IBM-Bluemix/twctestapp.git"
   },
+  "dependencies": {
+    "cfenv": "^1.0.3",
+    "express": "3.4.7",
+    "request": "^2.51.0"
+  },  
   "author": [
     {
       "name": "Robert Desbiens",
