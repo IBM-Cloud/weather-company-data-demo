@@ -103,7 +103,7 @@ Congratulations! You now have your very own instance of the Insights for Weather
 6. Start your app locally with the following command:
 
   ```
-  npm run
+  node app
   ```
 
 Your app will be automatically assigned to a port that will be logged to your terminal. To access the app, go to localhost:PORT in your browser. Happy developing!
