@@ -42,8 +42,6 @@ applications:
   domain: mybluemix.net
   instances: 3
   memory: 512M
-  services:
-  - twctestapp-weatherinsights
   ```
   The host you use will determinate your application URL initially, for example, `<host>.mybluemix.net`.
 
