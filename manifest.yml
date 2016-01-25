@@ -7,5 +7,3 @@ applications:
   domain: mybluemix.net
   instances: 3
   memory: 512M
-  services:
-  - twctestapp-weatherinsights
