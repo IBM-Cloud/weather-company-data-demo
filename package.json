@@ -26,5 +26,6 @@
       "name": "Trish Smith",
       "email": "smith@ca.ibm.com"
     }
-  ]
+  ],
+   "license": "Apache License"
 }
