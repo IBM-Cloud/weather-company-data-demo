@@ -1,5 +1,5 @@
 {
-  "name": "twctestapp",
+  "name": "insights-for-weather-demo",
   "version": "0.0.1",
   "private": false,
   "description": "A sample nodejs app for using the Insights for Weather Service in Bluemix.",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IBM-Bluemix/twctestapp.git"
+    "url": "https://github.com/IBM-Bluemix/insights-for-weather-demo.git"
   },
   "dependencies": {
     "cfenv": "^1.0.3",
