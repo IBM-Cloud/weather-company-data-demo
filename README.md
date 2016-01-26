@@ -109,7 +109,7 @@ Your app will be automatically assigned to a port that will be logged to your te
   server starting on http://localhost:6001
    ```
 
-To access the app, go to localhost:PORT (where PORT is 6001 in the example above) in your browser.
+To access the app,  you need to bind manually by copying the URL from the credentials into your app.js file. Now, go to localhost:PORT in your browser (for example, PORT is 6001 in the example above).
 
 ## API documentation
 The Insights for Weather demo app uses REST APIs to retrieve historical and real-time weather data from The Weather Company. 
