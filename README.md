@@ -25,7 +25,7 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 3. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-Bluemix/twctestapp.git
+  git clone https://github.com/IBM-Bluemix/insights-for-weather-demo.git
   ```
 
 4. `cd` into this newly created directory.
@@ -87,7 +87,7 @@ Congratulations! You now have your very own instance of the Insights for Weather
 3. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-Bluemix/twctestapp.git
+  git clone https://github.com/IBM-Bluemix/insights-for-weather-demo.git
   ```
 
 4. `cd` into this newly created directory.
@@ -117,7 +117,7 @@ You can try out the [REST APIs](https://twcservice.mybluemix.net/rest-api/) to g
 
 ## Contribute
 We are happy to accept external contributions to this project, either in the form of issues or pull requests. 
-If you find a bug, please report it using the [Issues section](https://github.com/IBM-Bluemix/twctestapp/issues) or even better, fork the project and submit a pull request with your fix! 
+If you find a bug, please report it using the [Issues section](https://github.com/IBM-Bluemix/insights-for-weather-demo/issues) or even better, fork the project and submit a pull request with your fix! 
 Pull requests will be evaluated on an individual basis based on value added to the sample application.
 
 ## Troubleshooting
