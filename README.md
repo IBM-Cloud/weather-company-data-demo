@@ -35,8 +35,8 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
   ```
 applications:
 - disk_quota: 1024M
-  name: twctestapp
-  host: twctestapp
+  name: insights-for-weather-demo
+  host: insights-for-weather-demo
   command: node app.js
   path: .
   domain: mybluemix.net
@@ -55,7 +55,7 @@ applications:
 7. Create the Insights for Weather service in Bluemix.
 
   ```
-  $ cf create-service weatherinsights Free twctestapp-weatherinsights
+  $ cf create-service weatherinsights Free weatherinsights-service
   ```
 
 8. Push it to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument
@@ -66,13 +66,13 @@ applications:
 9. Now bind the service to your app.
 
   ```
-  $ cf bind-service twctestapp twctestapp-weatherinsights
+  $ cf bind-service insights-for-weather-demo weatherinsights-service
   ```
 
 12. Finally, restage your app.
 
   ```
-  $ cf restage twctestapp
+  $ cf restage insights-for-weather-demo
   ```
 
 Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix.
