@@ -1,5 +1,4 @@
 // app.js
-//BEGIN COPYRIGHT
 //*************************************************************************
 // Copyright 2016 IBM Corp.
 //
@@ -15,7 +14,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //*************************************************************************
-//END COPYRIGHT
 
 var express = require('express');
 var request = require('request');
