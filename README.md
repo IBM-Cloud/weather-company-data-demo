@@ -52,7 +52,7 @@ applications:
   $ cf login
   ```
 
-7. Create the Insights for Weather service in Bluemix.
+7. Create the Insights for Weather service in Bluemix. **Note**: You might need to target a space by using the `cf target -s SPACE` command.
 
   ```
   $ cf create-service weatherinsights Free weatherinsights-service
