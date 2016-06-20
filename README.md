@@ -76,7 +76,7 @@ applications:
   $ cf start insights-for-weather-demo
   ```
 
-Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix. Try it out at `https://<host>.mybluemix.net`, where <host> is the value that you set in your `manifest.yml` file.
+Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix. Try it out at `https://<host>.mybluemix.net`, where `host` is the value that you set in your `manifest.yml` file.
 
 ## Run the app locally
 1. Create a Bluemix Account. You will need this account to create a Insights for Weather service and grab the credentials later on.
