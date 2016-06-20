@@ -69,13 +69,13 @@ applications:
   $ cf bind-service insights-for-weather-demo weatherinsights-service
   ```
 
-10. Start your app. **Note**: You can also do this from the Bluemix dashboard. 
+10. Start your app. You can also do this from the Bluemix dashboard. **Note**: Use the name of the app that you chose in step 5.
 
   ```
   $ cf start insights-for-weather-demo
   ```
 
-11. Finally, restage your app. **Note**: Use the name of the app that you chose in step 5.
+11. Finally, restage your app. Monitor your app status in the Bluemix dashboard. **Note**: Use the name of the app that you chose in step 5.
 
   ```
   $ cf restage insights-for-weather-demo
