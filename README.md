@@ -63,13 +63,14 @@ applications:
   ```
   $ cf push --no-start
   ```
+  
 9. Now bind the service to your app. **Note**: The name *insights-for-weather-demo* must be updated to reflect the name that you chose in step 5.
 
   ```
   $ cf bind-service insights-for-weather-demo weatherinsights-service
   ```
 
-10. Finally, start your app. You can also do this from the Bluemix dashboard. **Note**: Use the name of the app that you chose in step 5.
+10. Finally, start your app. You can also do this from the Bluemix dashboard. **Note**: The name *insights-for-weather-demo* must be updated to reflect the name that you chose in step 5.
 
   ```
   $ cf start insights-for-weather-demo
