@@ -58,13 +58,13 @@ applications:
   $ cf create-service weatherinsights Free weatherinsights-service
   ```
 
-8. Push it to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument
+8. Push the service to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument.
 
   ```
   $ cf push --no-start
   ```
   
-9. Now bind the service to your app. **Note**: The name *insights-for-weather-demo* must be updated to reflect the name that you chose in step 5.
+9. Now, bind the service to your app. **Note**: The name *insights-for-weather-demo* must be updated to reflect the name that you chose in step 5.
 
   ```
   $ cf bind-service insights-for-weather-demo weatherinsights-service
@@ -76,7 +76,7 @@ applications:
   $ cf start insights-for-weather-demo
   ```
 
-Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix. Try it out at `https://<host>.mybluemix.net`.
+Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix. Try it out at `https://<host>.mybluemix.net`, where <host> is the value that you set in your `manifest.yml` file.
 
 ## Run the app locally
 1. Create a Bluemix Account. You will need this account to create a Insights for Weather service and grab the credentials later on.
