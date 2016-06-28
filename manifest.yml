@@ -1,9 +1,9 @@
 applications:
 - disk_quota: 1024M
-  name: insights-for-weather-demo
-  host: insights-for-weather-demo
+  name: weather-company-data-demo
+  host: weather-company-data-demo
   command: node app.js
   path: .
   domain: mybluemix.net
-  instances: 3
+  instances: 1
   memory: 512M
