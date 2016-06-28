@@ -1,17 +1,18 @@
-# Insights for Weather demo app
-A demo app that uses IBM Insights for Weather for Bluemix.
+# Weather Company Data for IBM Bluemix demo app
+A demo app that uses Weather Company Data for IBM Bluemix.
+
 #Overview
 
-The Insights for Weather demo app uses your current location (or a location that you select from the drop-down list) 
-to display the current weather conditions, the 24-hour forecast, and the 10-day forecast, using the Insights for Weather REST APIs and The Weather Company weather data.
+The Weather Company Data demo app uses your current location (or a location that you select from the drop-down list) 
+to display the current weather conditions, the 24-hour forecast, and the 10-day forecast, using the Weather Company weather data.
 
-This app demonstrates how quickly you can build an app on Bluemix using the Insights for Weather service.
+This app demonstrates how quickly you can build an app on Bluemix using the Weather Company Data service.
 
 ## Application Requirements
 You can use this app in any browser.
 
 ## Run the app on Bluemix
-You can deploy your own instance of Insights for Weather demo app to Bluemix. 
+You can deploy your own instance of Weather Company Data demo app to Bluemix. 
 To do this, you can either use the _Deploy to Bluemix_ button for an automated deployment or follow the steps below to create and deploy your app manually.
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy)
@@ -25,7 +26,7 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
 3. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-Bluemix/insights-for-weather-demo.git
+  git clone https://github.com/IBM-Bluemix/weather-company-data-demo.git
   ```
 
 4. `cd` into this newly created directory.
@@ -35,12 +36,12 @@ To do this, you can either use the _Deploy to Bluemix_ button for an automated d
   ```
 applications:
 - disk_quota: 1024M
-  name: insights-for-weather-demo
-  host: insights-for-weather-demo
+  name: weather-company-data-demo
+  host: weather-company-data-demo
   command: node app.js
   path: .
   domain: mybluemix.net
-  instances: 3
+  instances: 1
   memory: 512M
   ```
   The host you use will determinate your application URL initially, for example, `<host>.mybluemix.net`.
@@ -52,10 +53,10 @@ applications:
   $ cf login
   ```
 
-7. Create the Insights for Weather service in Bluemix. **Note**: You might need to target a space by selecting a space or by using the `cf target -s SPACE` command.
+7. Create the Weather Company Data service in Bluemix. **Note**: You might need to target a space by selecting a space or by using the `cf target -s SPACE` command.
 
   ```
-  $ cf create-service weatherinsights Free weatherinsights-service
+  $ cf create-service weatherinsights Free weathercompanydata-service
   ```
 
 8. Push the service to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument.
@@ -64,22 +65,22 @@ applications:
   $ cf push --no-start
   ```
   
-9. Now, bind the service to your app. **Note**: The name *insights-for-weather-demo* must be updated to reflect the name that you chose in step 5.
+9. Now, bind the service to your app. **Note**: The name *weather-company-data-demo* must be updated to reflect the name that you chose in step 5.
 
   ```
-  $ cf bind-service insights-for-weather-demo weatherinsights-service
+  $ cf bind-service weather-company-data-demo weathercompanydata-service
   ```
 
-10. Finally, start your app. You can also do this from the Bluemix dashboard. **Note**: The name *insights-for-weather-demo* must be updated to reflect the name that you chose in step 5.
+10. Finally, start your app. You can also do this from the Bluemix dashboard. **Note**: The name *weather-company-data-demo* must be updated to reflect the name that you chose in step 5.
 
   ```
-  $ cf start insights-for-weather-demo
+  $ cf start weather-company-data-demo
   ```
 
-Congratulations! You now have your very own instance of the Insights for Weather demo app running on Bluemix. Try it out at `https://<host>.mybluemix.net`, where `host` is the value that you set in your `manifest.yml` file.
+Congratulations! You now have your very own instance of the Weather Company Data demo app running on Bluemix. Try it out at `https://<host>.mybluemix.net`, where `host` is the value that you set in your `manifest.yml` file.
 
 ## Run the app locally
-1. Create a Bluemix Account. You will need this account to create a Insights for Weather service and grab the credentials later on.
+1. Create a Bluemix Account. You will need this account to create a Weather Company Data service and grab the credentials later on.
 
     [Sign up][bluemix_signup_url] in Bluemix, or use an existing account.
 
@@ -88,7 +89,7 @@ Congratulations! You now have your very own instance of the Insights for Weather
 3. Clone the app to your local environment from your terminal using the following command:
 
   ```
-  git clone https://github.com/IBM-Bluemix/insights-for-weather-demo.git
+  git clone https://github.com/IBM-Bluemix/weather-company-data-demo.git
   ```
 
 4. `cd` into this newly created directory.
@@ -113,12 +114,12 @@ Your app will be automatically assigned to a port that will be logged to your te
 To access the app,  you need to bind manually by copying the URL from the credentials into your app.js file. Now, go to localhost:PORT in your browser (for example, PORT is 6001 in the example above).
 
 ## API documentation
-The Insights for Weather demo app uses REST APIs to retrieve historical and real-time weather data from The Weather Company. 
+The Weather Company Data demo app uses REST APIs to retrieve historical and real-time weather data from The Weather Company. 
 You can try out the [REST APIs](https://twcservice.mybluemix.net/rest-api/) to get started with your own app. 
 
 ## Contribute
 We are happy to accept external contributions to this project, either in the form of issues or pull requests. 
-If you find a bug, please report it using the [Issues section](https://github.com/IBM-Bluemix/insights-for-weather-demo/issues) or even better, fork the project and submit a pull request with your fix! 
+If you find a bug, please report it using the [Issues section](https://github.com/IBM-Bluemix/weather-company-data-demo/issues) or even better, fork the project and submit a pull request with your fix! 
 Pull requests will be evaluated on an individual basis based on value added to the sample application.
 
 ## Troubleshooting
@@ -132,7 +133,7 @@ For more detailed information on troubleshooting your application, see the [Trou
 
 ## Privacy Notice
 
-The Insights for Weather demo app includes code to track deployments to Bluemix and other Cloud Foundry platforms. 
+The Weather Company Data demo app includes code to track deployments to Bluemix and other Cloud Foundry platforms. 
 The following information is sent to a [Deployment Tracker](https://github.com/cloudant-labs/deployment-tracker) service on each deployment:
 
 * Application Name (application_name)

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- Copyright IBM Corp. 2015  All Rights Reserved. -->
-<!-- IBM Insights for Weather Demo App - Initial version -->
+<!-- Copyright IBM Corp. 2016  All Rights Reserved. -->
+<!-- Weather Company Data for IBM Bluemix Demo App -->
 <html>
 <head>
-	<title>Insights for Weather Demo App</title>
+	<title>Weather Company Data Demo App</title>
 	<link rel="shortcut icon" href="images/twc_favicon.png" />
   	<link href='main.css' media='screen' rel='stylesheet' type='text/css'/>
 </head>
@@ -18,7 +18,7 @@
 					<img src="images/logo_small.png" style="margin-top:3px;"/>
 				</td>
 				<td nowrap="nowrap">
-					<span style="font-size:14pt; padding:0 8px;">Insights for Weather</span>
+					<span style="font-size:14pt; padding:0 8px;">Weather Company Data for IBM Bluemix</span>
 				</td>
 				<td width="100%">
 				</td>
@@ -132,23 +132,20 @@
 	</div>
 	<table id="weather_display" style="width:800px; height:200px; margin:0 auto; display:none;" cellspacing="0" cellpadding="0" border="0" width="800px" height="200px">
 		<tr>
-			<td align="left" width="200px" style="color:white;">
+			<td align="left" valign="top" width="200px" style="color:white;">
 				<table cellspacing="0" cellpadding="0" border="0" width="50px" height="200px" style="padding:10px; border-radius:10px;">
 					<tr>
-						<td colspan="2" align="center" width="100%" style="">
+						<td align="center" width="100%" style="">
 							<span id="weather_dow" style="font-family:Arial; font-size:18pt; white-space:nowrap;"></span>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2" align="center" width="100%" style="white-space:nowrap;">
+						<td align="center" width="100%" style="white-space:nowrap;">
 							<span id="weather_date" style="font-family:Arial; font-size:14pt; white-space:nowrap;"></span>
 						</td>
 					</tr>
 					<tr>
 						<td id="weather_icon" align="center">
-						</td>
-						<td align="center" style="white-space:nowrap;">
-							<span id="weather_temp" style="font-family:Arial; font-size:50pt"></span>
 						</td>
 					</tr>
 					<tr>
@@ -158,12 +155,13 @@
 					</tr>
 				</table>
 			</td>
-			<td align="center" width="400px">
+			<td align="center" valign="top" width="400px">
+				<div style="width:200px; height:35px; color:white; margin-top:20px;">
+					<span id="weather_temp" style="font-family:Arial; font-size:50pt; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"></span>
 
-				<span id="weather_location" style="font-size:14pt; font-weight:bold; color:black;"></span>
 			</td>
 			<td align="right" valign="top" width="200px" style="font-family:Arial; font-size:11pt; ">&nbsp;
-				<table cellspacing="0" cellpadding="0" border="0" width="200px" height="180px" style="padding:10px; border-radius:10px;">
+				<table cellspacing="0" cellpadding="0" border="0" width="200px" height="180px" style="padding:10px;">
 					<tr>
 						<td align="left" style="color:white;">Wind</td>
 						<td id="weather_wind" align="right" style="color:white;"></td>

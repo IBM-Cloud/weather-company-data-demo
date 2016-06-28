@@ -59,28 +59,32 @@ function weatherAPI(path, qs, done) {
 }
 
 app.get('/api/forecast/daily', function(req, res) {
-    weatherAPI("/api/weather/v2/forecast/daily/10day", {
-        geocode: req.query.geocode || "34.53,84.50",
+    var geocode = (req.query.geocode || "45.43,-75.68").split(",");
+    weatherAPI("/api/weather/v1/geocode/" + geocode[0] + "/" + geocode[1] + "/forecast/daily/10day.json", {
         units: req.query.units || "m",
         language: req.query.language || "en"
     }, function(err, result) {
         if (err) {
+        	console.log(err);
             res.send(err).status(400);
         } else {
+        	console.log("10 days Forecast");
             res.json(result);
         }
     });
 });
 
 app.get('/api/forecast/hourly', function(req, res) {
-    weatherAPI("/api/weather/v2/forecast/hourly/24hour", {
-        geocode: req.query.geocode || "45.42,-75.68",
+    var geocode = (req.query.geocode || "45.43,-75.68").split(",");
+    weatherAPI("/api/weather/v1/geocode/" + geocode[0] + "/" + geocode[1] + "/forecast/hourly/48hour.json", {
         units: req.query.units || "m",
         language: req.query.language || "en"
     }, function(err, result) {
         if (err) {
             res.send(err).status(400);
         } else {
+        	console.log("24 hours Forecast");
+            result.forecasts.length = 24;    // we require only 24 hours for UI
             res.json(result);
         }
     });
