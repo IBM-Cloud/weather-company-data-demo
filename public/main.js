@@ -125,7 +125,10 @@ function tempType() {
 }
 
 function updateToday(forecast) {
-	var d = new Date(forecast.fcst_valid_local) || Date.now();
+	var d = new Date(forecast.fcst_valid_local);
+	if (d.toString() == "Invalid Date") {
+		d = new Date();
+	}
 	var dateString =  getMonthDate(d) + ", " + d.getFullYear();
 	var data = forecast.day || forecast.night;
 
@@ -175,27 +178,6 @@ function renderDay(forecast, period) {
 	return s;
 }
 
-function renderDay2(forecast, period) {
-	var s = "";
-	if (period) {
-		s += '<table cellspacing="0px" cellpadding="0px" border="0" width="350px" height="80px">'
-		+		'<td valign="top" align="left" height="60px" width="60px">'
-		+ 			'<img vspace="10px" hspace="10px" width="40px" height="40px" src="' + getIconURL(period.icon_code) + '"/>'
-		+		'</td>'
-		+		'<td align="center" height="60px" width="80px" style="color:white;">'
-		+			'<span style="font-size:14pt;">' + period.hi + '&#176; / </span>'
-		+			'<span style="font-size:12pt;">' + forecast.min_temp + '&#176;</span>'
-		+		'</td>'
-		+		'<td valign="top" align="left" width:220px; style="padding:4px;">'
-		+			'<span style="font-size:10pt; font-family:sans-serif; color:white;">' 
-		+ 				period.narrative 
-		+ 			'</span>'
-		+		'</td>'
-		+	'</table>';
-	}
-	return s;
-}
-
 
 //-- vertical layout
 function renderForecastDay(forecast, index) {
@@ -222,39 +204,6 @@ function renderForecastDay(forecast, index) {
 	return s;
 }
 
-//-- vertical layout
-function renderForecastDay2(forecast, index) {
-	var icon = (forecast.day || forecast.night).icon_code;
-	var s = 
-		'<table cellspacing="0px" cellpadding="0px" border="0" width="810px" height="60px" '
-	+		' style="border:1px solid silver; margin-bottom:5px; background-color:#000000; border-radius:5px; cursor:pointer"'
-	+		' onmouseover="overHour(this);" onmouseout="outHour(this);"; onclick="clickDay(' + index + ');">'
-	+		'<tr>'
-	+			'<td align="center" height="60px" width="120px" style="background-color:#5599C8; color:white;">'
-	+				'<span style="font-size:12pt; font-weight:bold; font-family:sans-serif; color:white;">' 
-	+					forecast.dow
-	+ 				'</span>'
-	+			'</td>'
-	+			'<td valign="top" align="left" height="60px" width="60px">'
-	+ 				'<img vspace="10px" hspace="10px" width="40px" height="40px" src="' + getIconURL(icon) + '"/>'
-	+			'</td>'
-	+			'<td align="center" height="60px" width="80px" style="color:white;">'
-	+				'<span style="font-size:14pt;">' + forecast.max_temp + '&#176; / </span>'
-	+				'<span style="font-size:12pt;">' + forecast.min_temp + '&#176;</span>'
-	+			'</td>'
-	+			'<td valign="top" align="left" width:300px; style="padding:4px;">'
-	+				'<span style="font-size:10pt; font-family:sans-serif; color:white;">' 
-	+ 					forecast.narrative 
-	+ 				'</span>'
-	+			'</td>'
-	+			'<td width="300px">'
-	+			'</td>'
-	+		'</tr>'
-	+	'</table>'
-	+ 	'<div id="dailyforecast_json_' + index + '" style="display:none; margin-bottom:10px"></div>';
-
-	return s;
-}
 
 var dailyForecasts = [];	// current data
 

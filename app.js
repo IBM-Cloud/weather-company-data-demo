@@ -19,13 +19,29 @@ var express = require('express');
 var request = require('request');
 var cfenv = require('cfenv');
 
+//Security - helmet
+var helmet = require('helmet');
+
+//setup middleware
 var app = express();
-app.use(express.static(__dirname + '/public'));
+var ninetyDaysInMilliseconds = 7776000000;
+
+app.configure(function(){
+  app.use(express.static(__dirname + '/public'));
+  // set the HTTP Strict Transport Security (HSTS) header for 90 days	
+  app.use(helmet.hsts({
+	  maxAge: ninetyDaysInMilliseconds,
+	  includeSubdomains: true,
+	  force: true
+  }));
+  // Prevent Cross-site scripting (XSS) attacks
+  app.use(helmet.xssFilter());  
+});
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 var weather_host = appEnv.services["weatherinsights"] 
-        ? appEnv.services["weatherinsights"][0].credentials.url // Insights for Weather credentials passed in
+        ? appEnv.services["weatherinsights"][0].credentials.url // Weather credentials passed in
         : ""; // or copy your credentials url here for standalone
 
 function weatherAPI(path, qs, done) {

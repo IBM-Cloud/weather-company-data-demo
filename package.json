@@ -13,6 +13,7 @@
   "dependencies": {
     "cfenv": "^1.0.3",
     "express": "3.4.7",
+    "helmet": "^2.1.1",
     "request": "^2.51.0"
   },  
   "author": [
