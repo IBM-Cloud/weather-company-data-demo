@@ -56,7 +56,7 @@ applications:
 7. Create the Weather Company Data service in Bluemix. **Note**: You might need to target a space by selecting a space or by using the `cf target -s SPACE` command.
 
   ```
-  $ cf create-service weatherinsights Free weathercompanydata-service
+  $ cf create-service weatherinsights Free-v2 weathercompanydata-service
   ```
 
 8. Push the service to Bluemix. You need to perform additional steps when it is deployed, so you must add the option --no-start argument.
