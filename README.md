@@ -1,7 +1,7 @@
 # Weather Company Data for IBM Bluemix demo app
 A demo app that uses Weather Company Data for IBM Bluemix.
 
-#Overview
+# Overview
 
 The Weather Company Data demo app uses your current location (or a location that you select from the drop-down list) 
 to display the current weather conditions, the 24-hour forecast, and the 10-day forecast, using the Weather Company weather data.
